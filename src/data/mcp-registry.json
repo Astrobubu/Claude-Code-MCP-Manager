@@ -1,0 +1,432 @@
+{
+  "mcps": [
+    {
+      "id": "playwright-mcp",
+      "name": "Playwright MCP",
+      "description": "An MCP server for browser automation using Playwright. Control browsers, take screenshots, and automate web interactions.",
+      "category": "Browser Automation",
+      "repository": "https://github.com/Automata-Labs-team/MCP-Server-Playwright",
+      "requiresApi": false,
+      "config": {
+        "command": "npx",
+        "args": ["@automata-labs/mcp-server-playwright"],
+        "env": {}
+      },
+      "apiFields": [],
+      "estimatedTokens": 1500,
+      "installation": {
+        "type": "npm",
+        "package": "@automata-labs/mcp-server-playwright"
+      },
+      "tags": ["browser", "automation", "testing", "no-api"],
+      "popularity": 85
+    },
+    {
+      "id": "browserbase",
+      "name": "Browserbase",
+      "description": "Automate browser interactions in the cloud with Browserbase. Run browsers at scale without infrastructure concerns.",
+      "category": "Browser Automation",
+      "repository": "https://github.com/browserbase/mcp-server-browserbase",
+      "requiresApi": true,
+      "config": {
+        "command": "npx",
+        "args": ["@browserbasehq/mcp-server-browserbase"],
+        "env": {
+          "BROWSERBASE_API_KEY": "",
+          "BROWSERBASE_PROJECT_ID": ""
+        }
+      },
+      "apiFields": [
+        {
+          "name": "BROWSERBASE_API_KEY",
+          "label": "API Key",
+          "type": "password",
+          "required": true,
+          "description": "Your Browserbase API key from dashboard"
+        },
+        {
+          "name": "BROWSERBASE_PROJECT_ID",
+          "label": "Project ID",
+          "type": "text",
+          "required": true,
+          "description": "Your Browserbase project identifier"
+        }
+      ],
+      "estimatedTokens": 2000,
+      "installation": {
+        "type": "npm",
+        "package": "@browserbasehq/mcp-server-browserbase"
+      },
+      "tags": ["browser", "cloud", "automation", "api-required"],
+      "popularity": 92
+    },
+    {
+      "id": "aws-mcp",
+      "name": "AWS MCP",
+      "description": "AWS MCP servers for seamless integration with AWS services. Manage EC2, S3, Lambda, and other AWS resources.",
+      "category": "Cloud Platforms",
+      "repository": "https://github.com/awslabs/mcp",
+      "requiresApi": true,
+      "config": {
+        "command": "npx",
+        "args": ["@aws/mcp-server"],
+        "env": {
+          "AWS_ACCESS_KEY_ID": "",
+          "AWS_SECRET_ACCESS_KEY": "",
+          "AWS_REGION": "us-east-1"
+        }
+      },
+      "apiFields": [
+        {
+          "name": "AWS_ACCESS_KEY_ID",
+          "label": "Access Key ID",
+          "type": "text",
+          "required": true,
+          "description": "Your AWS access key ID"
+        },
+        {
+          "name": "AWS_SECRET_ACCESS_KEY",
+          "label": "Secret Access Key",
+          "type": "password",
+          "required": true,
+          "description": "Your AWS secret access key"
+        },
+        {
+          "name": "AWS_REGION",
+          "label": "Region",
+          "type": "select",
+          "required": true,
+          "description": "AWS region for operations",
+          "options": ["us-east-1", "us-west-2", "eu-west-1", "ap-southeast-1"]
+        }
+      ],
+      "estimatedTokens": 3000,
+      "installation": {
+        "type": "npm",
+        "package": "@aws/mcp-server"
+      },
+      "tags": ["aws", "cloud", "infrastructure", "api-required"],
+      "popularity": 95
+    },
+    {
+      "id": "github-mcp",
+      "name": "GitHub MCP",
+      "description": "Interact with GitHub repositories, issues, pull requests, and workflows directly from Claude.",
+      "category": "Development Tools",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+      "requiresApi": true,
+      "config": {
+        "command": "npx",
+        "args": ["@modelcontextprotocol/server-github"],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+        }
+      },
+      "apiFields": [
+        {
+          "name": "GITHUB_PERSONAL_ACCESS_TOKEN",
+          "label": "Personal Access Token",
+          "type": "password",
+          "required": true,
+          "description": "GitHub PAT with repo and workflow permissions"
+        }
+      ],
+      "estimatedTokens": 2200,
+      "installation": {
+        "type": "npm",
+        "package": "@modelcontextprotocol/server-github"
+      },
+      "tags": ["github", "git", "development", "api-required"],
+      "popularity": 90
+    },
+    {
+      "id": "postgres-mcp",
+      "name": "PostgreSQL MCP",
+      "description": "Connect to PostgreSQL databases and execute queries, manage schemas, and handle database operations.",
+      "category": "Database",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+      "requiresApi": true,
+      "config": {
+        "command": "npx",
+        "args": ["@modelcontextprotocol/server-postgres"],
+        "env": {
+          "POSTGRES_CONNECTION_STRING": ""
+        }
+      },
+      "apiFields": [
+        {
+          "name": "POSTGRES_CONNECTION_STRING",
+          "label": "Connection String",
+          "type": "password",
+          "required": true,
+          "description": "PostgreSQL connection string (postgres://user:pass@host:port/db)"
+        }
+      ],
+      "estimatedTokens": 2800,
+      "installation": {
+        "type": "npm",
+        "package": "@modelcontextprotocol/server-postgres"
+      },
+      "tags": ["database", "postgresql", "sql", "api-required"],
+      "popularity": 88
+    },
+    {
+      "id": "filesystem-mcp",
+      "name": "Filesystem MCP",
+      "description": "Access and manipulate local filesystem. Read, write, and manage files and directories securely.",
+      "category": "File Management",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+      "requiresApi": false,
+      "config": {
+        "command": "npx",
+        "args": ["@modelcontextprotocol/server-filesystem"],
+        "env": {}
+      },
+      "apiFields": [],
+      "estimatedTokens": 1800,
+      "installation": {
+        "type": "npm",
+        "package": "@modelcontextprotocol/server-filesystem"
+      },
+      "tags": ["filesystem", "files", "local", "no-api"],
+      "popularity": 92
+    },
+    {
+      "id": "sqlite-mcp",
+      "name": "SQLite MCP",
+      "description": "Work with SQLite databases. Execute queries, manage tables, and handle local database operations.",
+      "category": "Database",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
+      "requiresApi": false,
+      "config": {
+        "command": "npx",
+        "args": ["@modelcontextprotocol/server-sqlite"],
+        "env": {}
+      },
+      "apiFields": [],
+      "estimatedTokens": 2200,
+      "installation": {
+        "type": "npm",
+        "package": "@modelcontextprotocol/server-sqlite"
+      },
+      "tags": ["database", "sqlite", "local", "no-api"],
+      "popularity": 87
+    },
+    {
+      "id": "docker-mcp",
+      "name": "Docker MCP",
+      "description": "Manage Docker containers, images, and compose files. Control your containerized applications.",
+      "category": "DevOps",
+      "repository": "https://github.com/modelcontextprotocol/servers/tree/main/src/docker",
+      "requiresApi": false,
+      "config": {
+        "command": "npx",
+        "args": ["@modelcontextprotocol/server-docker"],
+        "env": {}
+      },
+      "apiFields": [],
+      "estimatedTokens": 2500,
+      "installation": {
+        "type": "npm",
+        "package": "@modelcontextprotocol/server-docker"
+      },
+      "tags": ["docker", "containers", "devops", "no-api"],
+      "popularity": 89
+    },
+    {
+      "id": "openai-mcp",
+      "name": "OpenAI MCP",
+      "description": "Integrate with OpenAI's API. Generate text, images, embeddings, and more using GPT models.",
+      "category": "AI Services",
+      "repository": "https://github.com/openai/mcp-server",
+      "requiresApi": true,
+      "config": {
+        "command": "npx",
+        "args": ["@openai/mcp-server"],
+        "env": {
+          "OPENAI_API_KEY": ""
+        }
+      },
+      "apiFields": [
+        {
+          "name": "OPENAI_API_KEY",
+          "label": "API Key",
+          "type": "password",
+          "required": true,
+          "description": "Your OpenAI API key"
+        }
+      ],
+      "estimatedTokens": 2800,
+      "installation": {
+        "type": "npm",
+        "package": "@openai/mcp-server"
+      },
+      "tags": ["openai", "gpt", "ai", "api-required"],
+      "popularity": 96
+    },
+    {
+      "id": "slack-mcp",
+      "name": "Slack MCP",
+      "description": "Send messages, read channels, and interact with Slack workspaces programmatically.",
+      "category": "Communication",
+      "repository": "https://github.com/slack-mcp/mcp-server",
+      "requiresApi": true,
+      "config": {
+        "command": "npx",
+        "args": ["@slack/mcp-server"],
+        "env": {
+          "SLACK_BOT_TOKEN": "",
+          "SLACK_SIGNING_SECRET": ""
+        }
+      },
+      "apiFields": [
+        {
+          "name": "SLACK_BOT_TOKEN",
+          "label": "Bot Token",
+          "type": "password",
+          "required": true,
+          "description": "Slack bot token (xoxb-...)"
+        },
+        {
+          "name": "SLACK_SIGNING_SECRET",
+          "label": "Signing Secret",
+          "type": "password",
+          "required": true,
+          "description": "Slack app signing secret"
+        }
+      ],
+      "estimatedTokens": 2100,
+      "installation": {
+        "type": "npm",
+        "package": "@slack/mcp-server"
+      },
+      "tags": ["slack", "communication", "messaging", "api-required"],
+      "popularity": 84
+    },
+    {
+      "id": "redis-mcp",
+      "name": "Redis MCP",
+      "description": "Connect to Redis instances for caching, session management, and data storage operations.",
+      "category": "Database",
+      "repository": "https://github.com/redis-mcp/mcp-server",
+      "requiresApi": true,
+      "config": {
+        "command": "npx",
+        "args": ["@redis/mcp-server"],
+        "env": {
+          "REDIS_URL": ""
+        }
+      },
+      "apiFields": [
+        {
+          "name": "REDIS_URL",
+          "label": "Redis URL",
+          "type": "text",
+          "required": true,
+          "description": "Redis connection URL (redis://host:port)"
+        }
+      ],
+      "estimatedTokens": 1900,
+      "installation": {
+        "type": "npm",
+        "package": "@redis/mcp-server"
+      },
+      "tags": ["redis", "cache", "database", "api-required"],
+      "popularity": 86
+    },
+    {
+      "id": "mongodb-mcp",
+      "name": "MongoDB MCP",
+      "description": "Work with MongoDB databases. Perform CRUD operations, aggregations, and collection management.",
+      "category": "Database",
+      "repository": "https://github.com/mongodb-mcp/mcp-server",
+      "requiresApi": true,
+      "config": {
+        "command": "npx",
+        "args": ["@mongodb/mcp-server"],
+        "env": {
+          "MONGODB_URI": ""
+        }
+      },
+      "apiFields": [
+        {
+          "name": "MONGODB_URI",
+          "label": "MongoDB URI",
+          "type": "password",
+          "required": true,
+          "description": "MongoDB connection string"
+        }
+      ],
+      "estimatedTokens": 2400,
+      "installation": {
+        "type": "npm",
+        "package": "@mongodb/mcp-server"
+      },
+      "tags": ["mongodb", "nosql", "database", "api-required"],
+      "popularity": 88
+    },
+    {
+      "id": "notion-mcp",
+      "name": "Notion MCP",
+      "description": "Access and manipulate Notion pages, databases, and blocks. Create and manage content programmatically.",
+      "category": "Productivity",
+      "repository": "https://github.com/notion-mcp/mcp-server",
+      "requiresApi": true,
+      "config": {
+        "command": "npx",
+        "args": ["@notion/mcp-server"],
+        "env": {
+          "NOTION_API_KEY": ""
+        }
+      },
+      "apiFields": [
+        {
+          "name": "NOTION_API_KEY",
+          "label": "API Key",
+          "type": "password",
+          "required": true,
+          "description": "Notion integration API key"
+        }
+      ],
+      "estimatedTokens": 2400,
+      "installation": {
+        "type": "npm",
+        "package": "@notion/mcp-server"
+      },
+      "tags": ["notion", "productivity", "notes", "api-required"],
+      "popularity": 83
+    },
+    {
+      "id": "git-mcp",
+      "name": "Git MCP",
+      "description": "Execute Git operations locally. Commit, push, pull, branch management, and repository operations.",
+      "category": "Development Tools",
+      "repository": "https://github.com/git-mcp/mcp-server",
+      "requiresApi": false,
+      "config": {
+        "command": "npx",
+        "args": ["@git/mcp-server"],
+        "env": {}
+      },
+      "apiFields": [],
+      "estimatedTokens": 2100,
+      "installation": {
+        "type": "npm",
+        "package": "@git/mcp-server"
+      },
+      "tags": ["git", "version-control", "development", "no-api"],
+      "popularity": 94
+    }
+  ],
+  "categories": [
+    "Browser Automation",
+    "Cloud Platforms", 
+    "Development Tools",
+    "Database",
+    "File Management",
+    "DevOps",
+    "AI Services",
+    "Communication",
+    "Productivity"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:docs.claude.com)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enabledMcpjsonServers": [
+    "shadcn",
+    "supabase",
+    "sequential-thinking",
+    "Ref",
+    "cloudflare-mcp"
+  ],
+  "enableAllProjectMcpServers": true
+}
