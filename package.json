@@ -14,8 +14,8 @@
     "eject": "react-scripts eject"
   },
   "build": {
-    "appId": "com.claude.mcp-gui",
-    "productName": "Claude MCP Manager",
+    "appId": "com.claude.mcp-manager",
+    "productName": "Claude Code MCP Manager",
     "directories": {
       "output": "dist"
     },
@@ -23,7 +23,25 @@
       "build/**/*",
       "public/electron.js",
       "public/preload.js"
-    ]
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -49,7 +67,7 @@
     "autoprefixer": "^10.4.21",
     "concurrently": "^8.2.2",
     "electron": "^28.0.0",
-    "electron-builder": "^24.9.1",
+    "electron-builder": "^24.13.3",
     "postcss": "^8.5.6",
     "wait-on": "^7.2.0"
   },
