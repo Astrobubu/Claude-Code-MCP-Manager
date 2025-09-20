@@ -1,15 +1,31 @@
-# Claude MCP Manager
+# 🚀 Claude Code MCP Manager
 
-A GUI application to manage MCP (Model Context Protocol) servers for Claude Code projects.
+A modern, intuitive desktop application for managing Model Context Protocol (MCP) servers with ease. Built with React + Electron and featuring a beautiful shadcn/ui interface.
 
-## Features
+![Claude Code MCP Manager](https://img.shields.io/badge/Built%20with-Claude%20Code-blue?style=for-the-badge&logo=anthropic)
+![Version](https://img.shields.io/github/v/release/Astrobubu/Claude-Code-MCP-Manager?style=for-the-badge)
+![License](https://img.shields.io/github/license/Astrobubu/Claude-Code-MCP-Manager?style=for-the-badge)
 
-### ✅ Fully Implemented
-- **MCP Registry**: Curated list of popular MCP servers from [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers)
-- **Custom Title Bar**: Native window controls (minimize, maximize, close)
-- **Visual Interface**: Clean, dark-themed Material-UI interface with professional design
-- **Token Usage Tracking**: Shows estimated token consumption and percentage of Claude session limit
-- **Search & Filter**: Find MCPs by name, description, or category
+## ✨ Features
+
+### 🎯 **MCP Management Made Simple**
+- **Browse & Install**: Discover MCPs from our curated registry
+- **Multiple Scopes**: Project, Local, and Global installation support
+- **Universal Display**: See ALL installed MCPs, even those not in our registry
+- **Smart Detection**: Automatically detects existing MCP configurations
+
+### 🎨 **Modern UI/UX**
+- **Professional Design**: Clean interface with custom SVG logo and branding
+- **Smart Notifications**: Toast notifications that don't disrupt your workflow
+- **Single Scrollbar**: Themed scrollbar with proper overflow handling
+- **Visual Feedback**: Special styling for MCPs not in registry
+
+### 📧 **Community Features**
+- **Request MCPs**: One-click email to request new MCPs for the registry
+- **Report Missing**: Easy reporting for installed MCPs not in registry
+- **Email Integration**: Pre-filled templates for quick communication
+
+### ✅ **Fully Implemented**
 - **Real Installation**: Actually modifies MCP configuration files
 - **Multiple Scopes**: 
   - **Project**: Creates `.mcp.json` (version controlled, shared with team)
@@ -17,25 +33,8 @@ A GUI application to manage MCP (Model Context Protocol) servers for Claude Code
   - **Global**: Modifies Claude Desktop config (available across all projects)
 - **Directory Selection**: Browse and select target project directories
 - **Live Status**: Real-time display of installed MCPs per scope
-- **File System Integration**: Complete integration with Claude Code configuration system
-
-### 📋 Planned Features
-- Real-time MCP status monitoring
-- Configuration validation
-- Backup/restore functionality
-- Import/export MCP collections
-- Automated MCP discovery from GitHub
-- Comprehensive testing
-
-## Current MCP Registry
-
-The proof of concept includes 5 popular MCPs:
-
-1. **Playwright MCP** - Browser automation using Playwright
-2. **Browserbase** - Cloud browser automation
-3. **AWS MCP** - AWS services integration
-4. **Cloudflare MCP** - Cloudflare services integration
-5. **Metatool** - Unified MCP middleware
+- **Token Usage Tracking**: Exact token numbers with Claude context window limits
+- **Search & Filter**: Find MCPs by name, description, or category
 
 ## Installation
 
